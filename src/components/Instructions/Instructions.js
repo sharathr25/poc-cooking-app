@@ -27,8 +27,8 @@ const Instructions = (props) => {
             .database()
             .ref(`/dishes_4/${props.dishID}`)
             .update({ instructions })
-            .then(_ => console.log('updated', props.dishID))
-            .catch(_ => console.log('something went wrong', _))
+            .then(_ => {console.log('updated', props.dishID);alert(props.dishID + "updated")})
+            .catch(_ => {console.log('something went wrong', _);alert("something went wrong")})
     }
 
     return (

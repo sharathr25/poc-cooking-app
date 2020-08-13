@@ -23,8 +23,8 @@ const Ingredients = (props) => {
             .database()
             .ref(`/dishes_4/${props.dishID}`)
             .update({ ingredients })
-            .then(_ => console.log('updated', props.dishID))
-            .catch(_ => console.log('something went wrong'))
+            .then(_ => {console.log('updated', props.dishID); alert(props.dishID + "updated")})
+            .catch(_ => {console.log('something went wrong'); alert(props.dishID + "something went wrong")})
     }
 
     return (
